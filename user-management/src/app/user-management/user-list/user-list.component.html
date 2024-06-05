@@ -1,0 +1,22 @@
+<p>user-list works!</p>
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>full name</th>
+      <th>age</th>
+      <th>actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | async index as i">
+      <td>{{ i+1}}</td>
+      <td>{{ user.fullName }}</td>
+      <td>{{ user.age }}</td>
+      <td>
+        <button (click)="editUser(user.id)" >edit</button>
+        <button>delete</button>
+    </td>
+    </tr>
+  </tbody>
+</table>

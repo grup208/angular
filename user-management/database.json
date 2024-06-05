@@ -1,0 +1,39 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullName": "John Doe",
+      "age": 25
+    },
+    {
+      "id": "2",
+      "fullName": "Anna Doe",
+      "age": 21
+    },
+    {
+      "id": "7d6c",
+      "fullName": "Nino Doe",
+      "age": 50
+    },
+    {
+      "id": "65fe",
+      "fullName": "Nino Doe",
+      "age": 50
+    },
+    {
+      "id": "6041",
+      "fullName": "Nino Doe",
+      "age": 50
+    },
+    {
+      "id": "7f8a",
+      "fullName": "Nino Doe",
+      "age": 50
+    },
+    {
+      "id": "a86d",
+      "fullName": "Nino Doe",
+      "age": 50
+    }
+  ]
+}
