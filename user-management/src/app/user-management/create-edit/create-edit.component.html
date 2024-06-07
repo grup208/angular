@@ -1,2 +1,9 @@
-<p>create-edit works!</p>
-{{user | json }}
+<h3>{{userId? "Edit" : "Create" }} user</h3>
+<form [formGroup]="form" (ngSubmit)="submit()"> 
+    <input type="text" placeholder="full name" formControlName="fullName">
+    <br>
+    <input type="number" placeholder="age" formControlName="age">
+    <br>
+    <input type="submit" value="save user">
+</form>
+

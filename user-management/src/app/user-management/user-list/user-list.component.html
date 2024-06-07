@@ -1,4 +1,6 @@
 <p>user-list works!</p>
+<button [routerLink]="['create']" > crete new User</button>
+
 <table>
   <thead>
     <tr>
@@ -9,13 +11,13 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of users | async index as i">
+    <tr *ngFor="let user of users index as i">
       <td>{{ i+1}}</td>
       <td>{{ user.fullName }}</td>
       <td>{{ user.age }}</td>
       <td>
         <button (click)="editUser(user.id)" >edit</button>
-        <button>delete</button>
+        <button (click)="removeUser(user.id)">delete</button>
     </td>
     </tr>
   </tbody>
