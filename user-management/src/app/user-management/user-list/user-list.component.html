@@ -7,14 +7,20 @@
       <th>id</th>
       <th>full name</th>
       <th>age</th>
+      <th>email</th>
+      <th>password</th>
+      <th>role</th>
       <th>actions</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let user of users index as i">
-      <td>{{ i+1}}</td>
+      <td class="button">{{ i+1}}</td>
       <td>{{ user.fullName }}</td>
       <td>{{ user.age }}</td>
+      <td>{{ user.email }}</td>
+      <td>{{user.password}}</td>
+      <td>{{ user.role }}</td>
       <td>
         <button (click)="editUser(user.id)" >edit</button>
         <button (click)="removeUser(user.id)">delete</button>

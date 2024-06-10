@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentInit, Component, Input, OnDestroy, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, switchMap, tap } from 'rxjs';
 import { IUser } from 'src/app/models/user';
@@ -9,13 +9,21 @@ import { UsersService } from 'src/app/services/users.service';
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.scss'],
 })
-export class UserListComponent implements OnInit {
-  public users!: IUser[];
-  constructor(private usersService: UsersService, private router: Router) {}
 
-  ngOnInit(): void {
-     this.usersService.getUsers().subscribe((d:IUser[])=>this.users=d);
+export class UserListComponent implements OnInit {
+  public users!: IUser[];  
+ @Input() test=''
+  constructor(private usersService: UsersService, private router: Router) {
+    console.log('constructor')
   }
+ 
+ 
+  ngOnInit(): void {
+    console.log('ngOnInit')
+    this.usersService.getUsers().subscribe((d:IUser[])=>this.users=d);
+  }
+  
+  
 
   editUser(id?: string): void {
     this.router.navigate([`/users/edit/${id}`]);

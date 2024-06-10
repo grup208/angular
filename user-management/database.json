@@ -1,14 +1,12 @@
 {
   "users": [
     {
-      "id": "9557",
-      "fullName": "www",
-      "age": 15
-    },
-    {
-      "id": "e7f9",
-      "fullName": "ertryry",
-      "age": 56
+      "id": "3b48",
+      "fullName": "beqa",
+      "age": 30,
+      "role": "admin",
+      "email": "beqa@gmail.com",
+      "password": "123456789"
     }
   ]
 }
