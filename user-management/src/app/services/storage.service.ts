@@ -1,15 +1,19 @@
 import { Injectable } from '@angular/core';
 import { IUser } from '../models/user';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StorageService { 
    
-  constructor() { }
+  constructor() {}  
+
+  user$=new BehaviorSubject<IUser | null>(this.getUser())
 
   setUser(user:IUser):void{
-    localStorage.setItem('app-user',JSON.stringify(user))
+    localStorage.setItem('app-user',JSON.stringify(user));
+    this.user$.next(this.getUser());
   }
 
   getUser():IUser | null{
@@ -19,6 +23,7 @@ export class StorageService {
 
   clearUser():void{
     localStorage.removeItem('app-user')
+    this.user$.next(this.getUser());
   }
 
 }

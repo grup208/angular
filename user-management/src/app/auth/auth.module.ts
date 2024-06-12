@@ -7,10 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
 const routes:Routes=[
-  {
-    path:'',
-    component:AuthComponent
-  },
   {    
     path:'signUp',
     component:SignUpComponent
@@ -27,6 +23,9 @@ const routes:Routes=[
     AuthComponent,
     SignUpComponent,
     SignInComponent
+  ],
+  exports:[
+    AuthComponent,
   ],
   imports: [
     CommonModule,

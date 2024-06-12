@@ -1,3 +1,6 @@
-<button routerLink="/auth/signUp">sign Up</button>
-<button routerLink="/auth/signIn" >sign In</button>
+<div class="btn-wrapper">    
+    <button *ngIf="!(user$ | async)" routerLink="/signUp">sign Up</button>
+    <button routerLink="/signIn" *ngIf="!(user$ | async)" >sign In</button>
+    <button *ngIf="user$ | async" (click)="logout()">logout</button>
+</div>
 <router-outlet></router-outlet>
