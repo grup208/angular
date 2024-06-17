@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "user-management": {
+    "directives": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/user-management",
+            "outputPath": "dist/directives",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,18 +65,18 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "user-management:build:production"
+              "browserTarget": "directives:build:production"
             },
             "development": {
-              "browserTarget": "user-management:build:development"
+              "browserTarget": "directives:build:development"
             }
           },
-          "defaultConfiguration": "development"          
+          "defaultConfiguration": "development"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "user-management:build"
+            "browserTarget": "directives:build"
           }
         },
         "test": {

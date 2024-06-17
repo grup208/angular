@@ -9,7 +9,8 @@ export const authGuard: CanActivateFn = (route, state) => {
   const user: IUser | null = storageService.getUser();
   
   if(!user) {
-    router.navigate(['auth']);
+    router.navigate(['']);
+    alert('please sign in or sign up')
     return false;
   }
   else if (user?.role !== 'admin') {
