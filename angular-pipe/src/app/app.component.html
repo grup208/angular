@@ -1,0 +1,31 @@
+<h2>angular builtin pipe</h2>
+<!-- UpperCase Pipe and LowerCase Pipe -->
+<h3 > {{ "upper case pipe" | uppercase }}</h3>
+<h3 > {{ "UPPER CASE PIPE" | lowercase }}</h3>
+
+<!-- json Pipe -->
+{{person1 | json}}
+
+<!-- AsyncPipe  -->
+ <h3>person name: {{name$ | async }}</h3>
+ <button (click)="setName()">set name</button>
+
+<!-- Date Pipe  -->
+<h3> Date Pipe: {{today | date}}</h3>
+<h3> Date Pipe: {{today | date:'fullDate'}}</h3>
+<h3> Date Pipe: {{today | date:'short'}}</h3>
+
+<!-- PercentPipe -->
+<h3>Percentage Value: {{ myNumber | percent }}</h3>
+
+<!-- SlicePipe -->
+<h3>my sliced array:  {{myArray | slice:1:2}} </h3>
+
+<!-- TitleCasePipe -->
+<h3> myString : {{myString | titlecase }} </h3>
+
+
+<!--  custom doublePure -->
+
+<h3>myNumbers: {{myNumbers | doublePure }}</h3>
+<button (click)="changeArray()">set new array</button>
